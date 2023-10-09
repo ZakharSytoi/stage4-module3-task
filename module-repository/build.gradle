@@ -1,0 +1,22 @@
+plugins {
+    id 'java-library'
+    id 'org.flywaydb.flyway'
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+}
+
+dependencies {
+
+    // to access h2 console without any additional setup
+    runtimeOnly 'com.h2database:h2'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.1.4'
+
+}
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
