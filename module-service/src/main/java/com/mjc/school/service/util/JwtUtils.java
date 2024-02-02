@@ -47,7 +47,7 @@ public class JwtUtils {
         return getClaimsFromToken(token).get("permissions", List.class);
     }
 
-    private Claims getClaimsFromToken(String token){
+    private Claims getClaimsFromToken(String token) {
         return Jwts
                 .parser()
                 .setSigningKey(secret)
