@@ -43,6 +43,6 @@ public class NewsModel implements BaseEntity<Long> {
     )
     List<TagModel> tags = new LinkedList<>();
     //@OneToMany(mappedBy = "news", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    @OneToMany(mappedBy = "news", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "news", fetch = FetchType.LAZY, orphanRemoval = true)
     List<CommentModel> comments = new LinkedList<>();
 }
